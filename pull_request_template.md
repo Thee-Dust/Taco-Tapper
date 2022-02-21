@@ -1,21 +1,21 @@
-### Pull Request Template
+## Pull Request Template
 
-##### Description
+### Description
+
+ 
+
+### What's changed & where should the reviewer start?
 
 
 
-##### What's changed & where should the reviewer start?
-
-
-
-##### Relevant Screenshots/GIFs
+### Relevant Screenshots/GIFs
 
 
 ### Fixes
 
 
 
-#### Type of change
+## Type of change
 What is it?
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)
