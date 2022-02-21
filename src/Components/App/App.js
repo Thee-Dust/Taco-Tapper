@@ -1,15 +1,14 @@
 import React from 'react'
-import Game from '../Game/Game'
-import Shop from '../Shop/Shop'
+import GameContainer from '../GameContainer/GameContainer'
 import Header from '../Header/Header'
+import './App.scss'
 
 export default function App() {
 	return (
-		<main>
+		<div className='app'>
 			<Header/>
-			<Game/>
-			<Shop/>
-		</main>
+			<GameContainer/>
+		</div>
 	)
 }
 
