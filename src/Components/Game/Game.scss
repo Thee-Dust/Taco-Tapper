@@ -1,0 +1,56 @@
+@import '../../index.scss';
+
+.taco-tapper {
+	width: 50%;
+	height: 100%;
+	background-color: $gameColor;
+	border-right: 16px solid #FFF;
+
+}
+
+.taco-button {
+	width: $baseSize * 50;
+	height: $baseSize * 50;
+	background: none;
+	border: none;
+	cursor: pointer;
+
+	&:active {
+		animation: bounce .5s ease-in-out;
+	}
+}
+
+.taco-img {
+	width: $baseSize * 50;
+	filter: drop-shadow(0px $baseSize * 1.5 $baseSize * 3 #000);
+}
+
+@keyframes bounce {
+	0% {
+		transform: scale(0.8);
+	}
+
+	20% {
+		transform: scale(1.2);
+	}
+
+	30% {
+		transform: scale(0.85);
+	}
+
+	50% {
+		transform: scale(1.15);
+	}
+
+	70% {
+		transform: scale(0.95);
+	}
+
+	90% {
+		transform: scale(1.05);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
