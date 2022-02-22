@@ -2,7 +2,11 @@ import React from 'react'
 import taco from '../../Assets/Taco.png'
 import './Shop.scss'
 
-export default function Shop() {
+export default function Shop({ totalTacos, tacosSpent }) {
+	
+
+
+
 	return (
 		<div className="shop">
 			<h2>Shop</h2>

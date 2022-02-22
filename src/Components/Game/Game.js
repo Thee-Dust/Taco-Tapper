@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import taco from '../../Assets/Taco.png'
 import './Game.scss'
 
-export default function Game() {
+export default function Game({ totalTacos, tacosGained, tacosPerSecond }) {
+	const tacoNoun = totalTacos === 1 ? 'Taco' : 'Tacos';
+
+	const tacosTapped = (num) => {
+		tacosGained(num)
+	}
+
 	return (
 		<div className="taco-tapper">
 			<div className="tacos">
-				<h2>1,243 Tacos</h2>
-				<h3>3 Tacos per second</h3>
+				<h2>{totalTacos} {tacoNoun}</h2>
+				<h3>{tacosPerSecond} Tacos per second</h3>
 			</div>
-			<button className="taco-button">
+			<button onClick={() => tacosTapped(1)}className="taco-button">
 				<img src={taco} alt="pixel art of a taco" className="taco-img"/>
 			</button>
 		</div>
