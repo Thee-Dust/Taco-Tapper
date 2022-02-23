@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import taco from '../../Assets/Taco.png'
 import './Game.scss'
 

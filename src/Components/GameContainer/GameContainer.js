@@ -15,6 +15,7 @@ export default function GameContainer() {
 		setTotalTacos(prevState => prevState - num)
 	}
 
+
 	return (
 		<main className='game'>
 			<Game totalTacos={totalTacos} tacosGained={tacosGained} tacosPerSecond={tacosPerSecond}/>

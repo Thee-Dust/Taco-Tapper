@@ -1,9 +1,10 @@
 import React from 'react'
 import taco from '../../Assets/Taco.png'
+import './ShopOption.scss'
 
 export default function ShopOption({ totalTacos, tacosSpent, name, level, price, description }) {
 	//checks to see if user has enough tacos to spend on upgrade
-	const isDisabled = totalTacos > price ? true : false;
+	const isDisabled = totalTacos < price ? true : false;
 
 	const spendTacos = (num) => {
 		tacosSpent(num)

@@ -1,0 +1,44 @@
+@import '../../index.scss';
+
+.upgrade {
+	width: 95%;
+	height: $baseSize * 15.5;
+	color: black;
+	background-color: $buttonColor;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	.top-upgrade-row > p:nth-child(1) {
+		color: shopOptionAvailibePriceColor;
+	}
+
+	&:disabled {
+		color: $shopOptionUnavailibleColor;
+		background-color: $disabledButtonColor;
+
+		.top-upgrade-row > p:nth-child(1) {
+			color: $shopOptionUnavailibePriceColor;
+		}
+	}
+
+}
+
+.top-upgrade-row,
+.bottom-upgrade-row {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.bottom-upgrade-row> :nth-child(1) {
+	display: flex;
+	align-items: center;
+
+	.taco-image {
+		margin-right: $baseSize * 1.5;
+		width: $baseSize * 6;
+		filter: drop-shadow(0px $baseSize * .25 $baseSize * .5 #000);
+	}
+}
