@@ -13,7 +13,7 @@ export default function Game({ totalTacos, tacosGained, tacosPerSecond }) {
 		<div className="taco-tapper">
 			<div className="tacos">
 				<h2>{totalTacos} {tacoNoun}</h2>
-				<h3>{tacosPerSecond} Tacos per second</h3>
+				<h3>{tacosPerSecond} tacos per second</h3>
 			</div>
 			<button onClick={() => tacosTapped(1)}className="taco-button">
 				<img src={taco} alt="pixel art of a taco" className="taco-img"/>

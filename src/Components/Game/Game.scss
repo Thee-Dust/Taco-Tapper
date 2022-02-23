@@ -5,7 +5,27 @@
 	height: 100%;
 	background-color: $gameColor;
 	border-right: 16px solid #FFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
+.tacos {
+	height: $baseSize * 14;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-top: $baseSize * 5;
+
+	h2 {
+		font-size: $baseSize * 6;
+	}
+
+	h3 {
+		font-size: $baseSize * 3.5;
+	}
 }
 
 .taco-button {
@@ -14,6 +34,7 @@
 	background: none;
 	border: none;
 	cursor: pointer;
+	margin-top: $baseSize * 5;
 
 	&:active {
 		animation: bounce .5s ease-in-out;
@@ -27,19 +48,19 @@
 
 @keyframes bounce {
 	0% {
-		transform: scale(0.8);
+		transform: scale(0.9);
 	}
 
 	20% {
-		transform: scale(1.2);
+		transform: scale(1.1);
 	}
 
 	30% {
-		transform: scale(0.85);
+		transform: scale(0.95);
 	}
 
 	50% {
-		transform: scale(1.15);
+		transform: scale(1.05);
 	}
 
 	70% {

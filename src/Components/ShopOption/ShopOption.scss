@@ -8,24 +8,17 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	font-size: $baseSize * 4.5;
+	font-weight: bold;
 
-	.top-upgrade-row > p:nth-child(1) {
-		color: shopOptionAvailibePriceColor;
+	.bottom-upgrade-row > p:nth-child(1) {
+		color: $shopOptionAvailibePriceColor;
 	}
-
-	&:disabled {
-		color: $shopOptionUnavailibleColor;
-		background-color: $disabledButtonColor;
-
-		.top-upgrade-row > p:nth-child(1) {
-			color: $shopOptionUnavailibePriceColor;
-		}
-	}
-
 }
 
 .top-upgrade-row,
 .bottom-upgrade-row {
+	margin: 0;
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
@@ -41,4 +34,19 @@
 		width: $baseSize * 6;
 		filter: drop-shadow(0px $baseSize * .25 $baseSize * .5 #000);
 	}
+}
+
+.upgrade:disabled {
+	color: $shopOptionUnavailibleColor;
+	background-color: $disabledButtonColor;
+
+	.bottom-upgrade-row>p:nth-child(1) {
+		color: $shopOptionUnavailibePriceColor;
+	}
+
+	.taco-image {
+		filter: brightness(0.5) drop-shadow(0px $baseSize * .25 $baseSize * .5 #000);
+
+	}
+
 }

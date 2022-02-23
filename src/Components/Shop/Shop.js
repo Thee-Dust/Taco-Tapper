@@ -5,9 +5,10 @@ import ShopOption from '../ShopOption/ShopOption'
 
 export default function Shop({ totalTacos, tacosSpent }) {
 
-const shopOptionCards = ShopOptionsData.map(option => {
+const shopOptionCards = ShopOptionsData.map((option, index) => {
 	return(
 		<ShopOption 
+		key={index}
 		totalTacos={totalTacos}
 		tacosSpent={tacosSpent}
 		name={option.name}
