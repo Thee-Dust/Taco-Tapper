@@ -13,6 +13,7 @@ const shopOptionCards = ShopOptionsData.map((option, index) => {
 		level={option.level}
 		price={option.price}
 		reward={option.reward}
+		rewardType={option.rewardType}
 		description={option.description}
 		/>
 	)

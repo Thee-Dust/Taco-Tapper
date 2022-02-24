@@ -3,18 +3,22 @@ import taco from '../../Assets/Taco.png'
 import { useGame } from '../../Context/GameContext';
 import './ShopOption.scss'
 
-export default function ShopOption({ name, level, price, reward, description }) {
-	const [ optionLevel, setOptionLevel ] = useState(0)
-	const { totalTacos, tacosSpent, tacosGainedPerSecond } = useGame()
+export default function ShopOption({ name, level, price, reward, rewardType, description }) {
+	const [ optionLevel, setOptionLevel ] = useState(level)
+	const { totalTacos, tacosSpent, tacosGainedPerSecond, tacosGainedPerClick } = useGame()
 	
 	//checks to see if user has enough tacos to spend on upgrade
 	const isDisabled = totalTacos < price ? true : false;
 
 
 	const spendTacos = (num, reward) => {
-		tacosSpent(num)
-		tacosGainedPerSecond(reward)
 		setOptionLevel(prevState => prevState + 1)
+		tacosSpent(num)
+		if(rewardType === "click"){
+			tacosGainedPerClick(reward)
+			return
+		} 
+		tacosGainedPerSecond(reward)
 	}
 	
 	return (
