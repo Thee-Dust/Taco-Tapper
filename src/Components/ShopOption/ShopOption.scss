@@ -10,6 +10,8 @@
 	justify-content: space-between;
 	font-size: $baseSize * 4.5;
 	font-weight: bold;
+	border-radius: $baseSize * 1.5;
+	margin-bottom: $baseSize * 1.5;
 
 	.bottom-upgrade-row > p:nth-child(1) {
 		color: $shopOptionAvailibePriceColor;
@@ -18,7 +20,7 @@
 
 .top-upgrade-row,
 .bottom-upgrade-row {
-	margin: 0;
+	margin-bottom: $baseSize;
 	display: flex;
 	width: 100%;
 	justify-content: space-between;

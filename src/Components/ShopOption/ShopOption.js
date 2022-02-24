@@ -6,6 +6,8 @@ export default function ShopOption({ totalTacos, tacosSpent, name, level, price,
 	//checks to see if user has enough tacos to spend on upgrade
 	const isDisabled = totalTacos < price ? true : false;
 
+	console.log(price + 1)
+
 	const spendTacos = (num) => {
 		tacosSpent(num)
 	}
