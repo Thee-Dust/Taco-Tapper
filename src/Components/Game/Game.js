@@ -5,7 +5,7 @@ import './Game.scss'
 
 
 export default function Game() {
-	const { tacosGained, totalTacos, tacosPerSecond, tacosPerClicked } = useGame();
+	const { tacosGained, totalTacos, tacosPerSecond, tacosPerClick } = useGame();
 	const tacoNoun = totalTacos === 1 ? 'Taco' : 'Tacos';
 
 	const tacosTapped = (num) => {
@@ -18,7 +18,7 @@ export default function Game() {
 				<h2>{totalTacos.toLocaleString()} {tacoNoun}</h2>
 				<h3>{tacosPerSecond.toLocaleString()} tacos per second</h3>
 			</div>
-			<button onClick={() => tacosTapped(tacosPerClicked)}className="taco-button">
+			<button onClick={() => tacosTapped(tacosPerClick)}className="taco-button">
 				<img src={taco} alt="pixel art of a taco" className="taco-img"/>
 			</button>
 		</div>

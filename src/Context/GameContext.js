@@ -8,7 +8,7 @@ export function useGame() {
 }
 
 export function GameProvider({ children }) {
-	const [ tacosPerClicked, setTacosPerClicked ] = useState(1);
+	const [ tacosPerClick, setTacosPerClick ] = useState(1);
 	const [ totalTacos, setTotalTacos ] = useState(0);
 	const [ tacosPerSecond, setTacosPerSecond ] = useState(0);
 
@@ -33,11 +33,11 @@ export function GameProvider({ children }) {
 	}
 
 	const tacosGainedPerClick = (num) => {
-		setTacosPerClicked(prevState => prevState + num)
+		setTacosPerClick(prevState => prevState + num)
 	}
 
 const value={
-	tacosPerClicked,
+	tacosPerClick,
 	totalTacos,
 	tacosPerSecond,
 	tacosGained,
