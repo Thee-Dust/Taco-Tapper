@@ -1,8 +1,11 @@
 import React from 'react'
 import taco from '../../Assets/Taco.png'
+import { useGame } from '../../Context/GameContext';
 import './Game.scss'
 
-export default function Game({ totalTacos, tacosGained, tacosPerSecond }) {
+
+export default function Game() {
+	const { tacosGained, totalTacos, tacosPerSecond } = useGame();
 	const tacoNoun = totalTacos === 1 ? 'Taco' : 'Tacos';
 
 	const tacosTapped = (num) => {
@@ -12,8 +15,8 @@ export default function Game({ totalTacos, tacosGained, tacosPerSecond }) {
 	return (
 		<div className="taco-tapper">
 			<div className="tacos">
-				<h2>{totalTacos} {tacoNoun}</h2>
-				<h3>{tacosPerSecond} tacos per second</h3>
+				<h2>{totalTacos.toLocaleString()} {tacoNoun}</h2>
+				<h3>{tacosPerSecond.toLocaleString()} tacos per second</h3>
 			</div>
 			<button onClick={() => tacosTapped(1)}className="taco-button">
 				<img src={taco} alt="pixel art of a taco" className="taco-img"/>

@@ -9,30 +9,35 @@
 		"name": "Taco Truck",
 		"level": 0,
 		"price": 125,
+		"reward": 1,
 		"description": "Adds 1 taco/second"
 	},
 	{
 		"name": "Taco Resturant",
 		"level": 0,
 		"price": 1000,
+		"reward": 10,
 		"description": "Adds 10 tacos/second"
 	},
 	{
 		"name": "Taco Factory",
 		"level": 0,
 		"price": 8000,
+		"reward": 30,
 		"description": "Adds 30 taco/second"
 	},
 	{
 		"name": "Taco Shipment",
 		"level": 0,
 		"price": 20000,
+		"reward": 50,
 		"description": "Adds 50 tacos/second"
 	},
 	{
 		"name": "Taco City",
 		"level": 0,
 		"price": 100000,
+		"reward": 100,
 		"description": "Adds 100 tacos/second"
 	}
 ]
