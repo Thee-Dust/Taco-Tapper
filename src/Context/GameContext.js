@@ -13,9 +13,11 @@ export function GameProvider({ children }) {
 	const [ tacosPerSecond, setTacosPerSecond ] = useState(0);
 
 	useEffect(()=> {
-		const addTacosPerSec = () => setInterval(()=> { setTotalTacos(prevState => prevState + tacosPerSecond)}, 1000);
+		const addTacosPerSec = setInterval(()=> {
+			setTotalTacos(prevState => prevState + tacosPerSecond)
+		}, 1000);
 
-		addTacosPerSec()
+		return () => clearInterval(addTacosPerSec);
 	}, [tacosPerSecond])
 
 

@@ -12,6 +12,8 @@
 	font-weight: bold;
 	border-radius: $baseSize * 1.5;
 	margin-bottom: $baseSize * 1.5;
+	box-shadow: 0px $baseSize * .5 $baseSize #000;
+	border: $baseSize * .125 solid #979797;
 
 	.bottom-upgrade-row > p:nth-child(1) {
 		color: $shopOptionAvailibePriceColor;
