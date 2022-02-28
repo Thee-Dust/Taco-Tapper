@@ -3,36 +3,48 @@
 		"name": "Taco Tuesday",
 		"level": 0,
 		"price": 100,
-		"description": "Adds 1 extra taco per click"
+		"reward": 1,
+		"rewardType": "click",
+		"description": "Adds 1 extra taco/click"
 	},
 	{
 		"name": "Taco Truck",
 		"level": 0,
 		"price": 125,
+		"reward": 1,
+		"rewardType": "passive",
 		"description": "Adds 1 taco/second"
 	},
 	{
 		"name": "Taco Resturant",
 		"level": 0,
 		"price": 1000,
+		"reward": 10,
+		"rewardType": "passive",
 		"description": "Adds 10 tacos/second"
 	},
 	{
 		"name": "Taco Factory",
 		"level": 0,
 		"price": 8000,
+		"reward": 30,
+		"rewardType": "passive",
 		"description": "Adds 30 taco/second"
 	},
 	{
 		"name": "Taco Shipment",
 		"level": 0,
 		"price": 20000,
+		"reward": 50,
+		"rewardType": "passive",
 		"description": "Adds 50 tacos/second"
 	},
 	{
 		"name": "Taco City",
 		"level": 0,
 		"price": 100000,
+		"reward": 100,
+		"rewardType": "passive",
 		"description": "Adds 100 tacos/second"
 	}
 ]

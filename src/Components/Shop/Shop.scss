@@ -3,13 +3,20 @@
 .shop {
 	width: 50%;
 	background-color: $shopColor;
+
+	h2 {
+		font-size: $baseSize * 6;
+		margin-top: $baseSize * 5;
+	}
 }
 
 .shop-upgrades {
 	width: 100%;
+	height: $baseSize * 89;
+	margin-top: $baseSize * 5;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
+	overflow: auto;
 }
 

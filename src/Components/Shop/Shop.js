@@ -1,18 +1,19 @@
 import React from 'react'
 import ShopOptionsData from '../../ShopData/ShopData.json'
-import './Shop.scss'
 import ShopOption from '../ShopOption/ShopOption'
+import './Shop.scss'
 
-export default function Shop({ totalTacos, tacosSpent }) {
+export default function Shop() {
 
-const shopOptionCards = ShopOptionsData.map(option => {
+const shopOptionCards = ShopOptionsData.map((option, index) => {
 	return(
 		<ShopOption 
-		totalTacos={totalTacos}
-		tacosSpent={tacosSpent}
+		key={index}
 		name={option.name}
 		level={option.level}
 		price={option.price}
+		reward={option.reward}
+		rewardType={option.rewardType}
 		description={option.description}
 		/>
 	)
