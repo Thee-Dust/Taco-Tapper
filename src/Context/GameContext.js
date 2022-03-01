@@ -9,8 +9,16 @@ export function useGame() {
 
 export function GameProvider({ children }) {
 	const [ tacosPerClick, setTacosPerClick ] = useState(1);
-	const [ totalTacos, setTotalTacos ] = useState(0);
-	const [ tacosPerSecond, setTacosPerSecond ] = useState(0);
+
+	const [ totalTacos, setTotalTacos ] = useState(() => {
+		const savedTotalTacos = localStorage.getItem('total-tacos');
+		return savedTotalTacos !== null ? JSON.parse(savedTotalTacos) : 0
+	});
+
+	const [ tacosPerSecond, setTacosPerSecond ] = useState(() => {
+		const savedTacosPerSec = localStorage.getItem('tps');
+		return savedTacosPerSec !== null ? JSON.parse(savedTacosPerSec) : 0
+	});
 
 	useEffect(()=> {
 		const addTacosPerSec = setInterval(()=> {
@@ -35,6 +43,29 @@ export function GameProvider({ children }) {
 	const tacosGainedPerClick = (num) => {
 		setTacosPerClick(prevState => prevState + num)
 	}
+
+	// useEffects used to save state into local storage
+
+	useEffect(() => {
+		const saveTotalTacosToStorage = () => {
+			localStorage.setItem('total-tacos', JSON.stringify(totalTacos))
+		};
+		saveTotalTacosToStorage()
+	}, [totalTacos])
+
+	useEffect(() => {
+		const saveTacosPerSecondToStorage = () => {
+			localStorage.setItem('tps', JSON.stringify(tacosPerSecond))
+		};
+		saveTacosPerSecondToStorage(tacosPerSecond)
+	}, [])
+
+	// useEffect(() => {
+	// 	const saveToStorage = () => {
+	// 		localStorage.setItem('', JSON.stringify())
+	// 	};
+	// 	saveToStorage()
+	// }, [])
 
 const value={
 	tacosPerClick,
