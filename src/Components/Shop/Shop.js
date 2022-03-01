@@ -11,7 +11,7 @@ const shopOptionCards = ShopOptionsData.map((option, index) => {
 		key={index}
 		name={option.name}
 		level={option.level}
-		price={option.price}
+		basePrice={option.price}
 		reward={option.reward}
 		rewardType={option.rewardType}
 		description={option.description}
