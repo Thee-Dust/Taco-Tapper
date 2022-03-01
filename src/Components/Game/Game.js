@@ -1,12 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import taco from '../../Assets/Taco.png'
 import { useGame } from '../../Context/GameContext';
+import useAnimationFrame from '../../Hooks/useAnimationFrame';
 import './Game.scss'
 
 
 export default function Game() {
 	const { tacosGained, totalTacos, tacosPerSecond, tacosPerClick } = useGame();
+	const [ displayedTacos, setDisplayedTacos ] = useState(totalTacos);
 	const tacoNoun = totalTacos === 1 ? 'Taco' : 'Tacos';
+	
+	const lerp = (start, end, time) => {
+		return start + (end-start) * time
+	}
+	
+	useAnimationFrame((deltaTime) => {
+		setDisplayedTacos(prevState => lerp(prevState, totalTacos, (deltaTime/350)))
+	})
+
+	
+	// useEffect(() => {
+	// 	const updateDisplayTacos = () => {
+	// 		if(displayedTacos > totalTacos) {
+	// 			setDisplayedTacos(totalTacos)
+	// 		}
+	// 		if(displayedTacos !== totalTacos ) {
+	// 			setDisplayedTacos(prevState => lerp(displayedTacos, totalTacos, .0005))
+	// 		}
+	// 	}
+
+	// 	updateDisplayTacos()
+	// }, [displayedTacos, totalTacos])
 
 	const tacosTapped = (num) => {
 		tacosGained(num)
@@ -15,7 +39,7 @@ export default function Game() {
 	return (
 		<div className="taco-tapper">
 			<div className="tacos">
-				<h2>{totalTacos.toLocaleString()} {tacoNoun}</h2>
+				<h2>{Math.round(displayedTacos).toLocaleString()} {tacoNoun}</h2>
 				<h3>{tacosPerSecond.toLocaleString()} tacos per second</h3>
 			</div>
 			<button onClick={() => tacosTapped(tacosPerClick)}className="taco-button">

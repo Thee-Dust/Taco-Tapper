@@ -29,7 +29,7 @@
 		"price": 8000,
 		"reward": 30,
 		"rewardType": "passive",
-		"description": "Adds 30 taco/second"
+		"description": "Adds 30 tacos/second"
 	},
 	{
 		"name": "Taco Shipment",
