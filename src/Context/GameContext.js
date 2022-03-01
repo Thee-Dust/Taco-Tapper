@@ -20,8 +20,6 @@ export function GameProvider({ children }) {
 		return () => clearInterval(addTacosPerSec);
 	}, [tacosPerSecond])
 
-
-
 	const tacosGained = (num) => {
 		setTotalTacos(prevState => prevState + num)
 	}
