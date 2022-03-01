@@ -8,7 +8,7 @@ export default function ShopOption({ name, level, price, reward, rewardType, des
 	const { totalTacos, tacosSpent, tacosGainedPerSecond, tacosGainedPerClick } = useGame()
 	
 	//checks to see if user has enough tacos to spend on upgrade
-	const isDisabled = totalTacos < price ? true : false
+	const isDisabled = totalTacos < price ? true : false;
 
 	const spendTacos = (num, reward) => {
 		setOptionLevel(prevState => prevState + 1)
