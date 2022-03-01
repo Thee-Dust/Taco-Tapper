@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import taco from '../../Assets/Taco.png'
 import { useGame } from '../../Context/GameContext';
 import useAnimationFrame from '../../Hooks/useAnimationFrame';
@@ -15,7 +15,7 @@ export default function Game() {
 	}
 	
 	useAnimationFrame((deltaTime) => {
-		setDisplayedTacos(prevState => lerp(prevState, totalTacos, (deltaTime/100)))
+		setDisplayedTacos(prevState => lerp(prevState, totalTacos, (deltaTime/350)))
 	})
 
 	
