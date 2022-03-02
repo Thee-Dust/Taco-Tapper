@@ -14,7 +14,6 @@ export default function ShopOption({id, name, level, basePrice, reward, rewardTy
 
 	const spendTacos = (price, reward, index) => {
 		updateShopData(index)
-		// setOptionLevel(prevState => prevState + 1)
 		tacosSpent(price)
 		if(rewardType === "click"){
 			tacosGainedPerClick(reward)

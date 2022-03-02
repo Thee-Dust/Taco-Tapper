@@ -20,7 +20,7 @@ export default function Shop() {
 			try{
 				const savedShopData = localStorage.getItem('shop-data');
 				if(savedShopData !== null) {
-					setShopOptionsData(savedShopData)
+					setShopOptionsData(JSON.parse(savedShopData))
 				} else {
 					const fetchedShopData = await getShopData();
 					setShopOptionsData(fetchedShopData)
@@ -33,27 +33,32 @@ export default function Shop() {
 	}, [])
 
 		useEffect(() => {
-		const saveTacosPerSecondToStorage = () => {
+		const saveShopDataToStorage = () => {
 			localStorage.setItem('shop-data', JSON.stringify(shopOptionsData))
 		};
-		saveTacosPerSecondToStorage(shopOptionsData)
+		saveShopDataToStorage(shopOptionsData)
 	}, [shopOptionsData])
 
-const shopOptionCards = shopOptionsData.map((option, index) => {
-	return(
-		<ShopOption 
-		key={index}
-		id={index}
-		name={option.name}
-		level={option.level}
-		basePrice={option.price}
-		reward={option.reward}
-		rewardType={option.rewardType}
-		description={option.description}
-		updateShopData={updateShopData}
-		/>
-	)
-})
+	let shopOptionCards = <h1>No Options yet</h1>
+
+	if(shopOptionsData.length > 0) {
+		console.log(shopOptionsData)
+		shopOptionCards = shopOptionsData.map((option, index) => {
+			return(
+				<ShopOption 
+				key={index}
+				id={index}
+				name={option.name}
+				level={option.level}
+				basePrice={option.price}
+				reward={option.reward}
+				rewardType={option.rewardType}
+				description={option.description}
+				updateShopData={updateShopData}
+				/>
+				)
+		})
+	}
 
 
 	return (
