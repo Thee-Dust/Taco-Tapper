@@ -58,7 +58,7 @@ export function GameProvider({ children }) {
 			localStorage.setItem('tps', JSON.stringify(tacosPerSecond))
 		};
 		saveTacosPerSecondToStorage(tacosPerSecond)
-	}, [])
+	}, [tacosPerSecond])
 
 	// useEffect(() => {
 	// 	const saveToStorage = () => {
