@@ -1,6 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
 
-
 const GameContext = React.createContext();
 
 export function useGame() {
@@ -63,7 +62,6 @@ export function GameProvider({ children }) {
 		};
 		saveTacosPerSecondToStorage(tacosPerSecond)
 	}, [tacosPerSecond])
-
 
 const value={
 	tacosPerClick,
