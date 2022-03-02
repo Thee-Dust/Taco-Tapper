@@ -18,20 +18,6 @@ export default function Game() {
 		setDisplayedTacos(prevState => lerp(prevState, totalTacos, (deltaTime/350)))
 	})
 
-	
-	// useEffect(() => {
-	// 	const updateDisplayTacos = () => {
-	// 		if(displayedTacos > totalTacos) {
-	// 			setDisplayedTacos(totalTacos)
-	// 		}
-	// 		if(displayedTacos !== totalTacos ) {
-	// 			setDisplayedTacos(prevState => lerp(displayedTacos, totalTacos, .0005))
-	// 		}
-	// 	}
-
-	// 	updateDisplayTacos()
-	// }, [displayedTacos, totalTacos])
-
 	const tacosTapped = (num) => {
 		tacosGained(num)
 	}
