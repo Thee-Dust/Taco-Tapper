@@ -8,6 +8,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
 }
 
 .tacos {
@@ -29,12 +30,16 @@
 }
 
 .taco-button {
+	position: absolute;
+	left: 50%;
+	top: 50%;
 	width: $baseSize * 50;
 	height: $baseSize * 50;
 	background: none;
 	border: none;
 	cursor: pointer;
 	margin-top: $baseSize * 5;
+	transform: translate(-50%, -50%);
 
 	&:active {
 		animation: bounce .5s ease-in-out;
@@ -73,5 +78,28 @@
 
 	100% {
 		transform: scale(1);
+	}
+}
+
+/*~~~~~~Media Queries~~~~~~*/
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+	.taco-button {
+		width: $baseSize * 45;
+		height: $baseSize * 45;
+	}
+
+	.taco-img {
+		width: $baseSize * 45;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+	.taco-button {
+		width: $baseSize * 40;
+		height: $baseSize * 40;
+	}
+
+	.taco-img {
+		width: $baseSize * 40;
 	}
 }

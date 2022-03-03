@@ -1,0 +1,34 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Drawer from 'react-bottom-drawer';
+import Shop from '../Shop/Shop';
+
+
+
+const ShopDrawer = ({isVisible, closeDrawer}) => {
+	return (
+		<Drawer
+			duration={500}
+			hideScrollbars={true}
+			isVisible={isVisible}
+			onClose={closeDrawer}
+			className="shop-drawer"
+		>
+			<Shop />
+		</Drawer>
+	)
+}
+
+
+
+export default function BottomDrawer({closeDrawer, isVisible}) {
+	return (
+		<>
+		{ReactDOM.createPortal(
+			<ShopDrawer isVisible={isVisible} closeDrawer={closeDrawer}/>,
+			document.getElementById('drawer-root')
+		)}
+		</>
+	)
+}
+
