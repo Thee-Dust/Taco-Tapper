@@ -8,9 +8,8 @@ export function useGame() {
 
 export function GameProvider({ children }) {
 	const [ tacosPerClick, setTacosPerClick ] = useState(() => {
-		const savedShopData = localStorage.getItem('shop-data');
-		const savedTacosPerClick = savedShopData !== null ? JSON.parse(savedShopData) : [];
-		return !!savedTacosPerClick.length ? (savedTacosPerClick[0].level + 1) : 1
+		const savedTacosPerClick = localStorage.getItem('tacos-per-click');
+		return savedTacosPerClick !== null ? JSON.parse(savedTacosPerClick) : 1
 	});
 
 	const [ totalTacos, setTotalTacos ] = useState(() => {
@@ -62,6 +61,13 @@ export function GameProvider({ children }) {
 		};
 		saveTacosPerSecondToStorage(tacosPerSecond)
 	}, [tacosPerSecond])
+
+	useEffect(() => {
+		const saveTacosPerClick = () => {
+			localStorage.setItem('tacos-per-click', JSON.stringify(tacosPerClick))
+		};
+		saveTacosPerClick()
+	}, [tacosPerClick])
 
 const value={
 	tacosPerClick,
