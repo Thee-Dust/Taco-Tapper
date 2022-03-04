@@ -12,7 +12,6 @@
 	font-weight: bold;
 	padding-left: $baseSize * 1.5;
 	padding-right: $baseSize * 1.5;
-	padding-top: $baseSize * .5;
 	border-radius: $baseSize * 1.5;
 	margin-bottom: $baseSize * 1.5;
 	box-shadow: 0px $baseSize * .5 $baseSize #000;
@@ -22,6 +21,10 @@
 	.bottom-upgrade-row > p:nth-child(1) {
 		color: $shopOptionAvailibePriceColor;
 	}
+}
+
+.top-upgrade-row {
+	margin-top: $baseSize;
 }
 
 .top-upgrade-row,
@@ -71,8 +74,26 @@
 	}
 }
 
-@media screen and (min-width: 700px) and (max-width: 950px) {
+@media screen and (min-width: 800px) and (max-width: 950px) {
 	.upgrade {
 		font-size: $baseSize * 2.5;
+	}
+}
+
+@media screen and (min-width: 620px) and (max-width: 800px) {
+	.upgrade {
+		font-size: $baseSize * 4;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 620px) {
+	.upgrade {
+		font-size: $baseSize * 3;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.upgrade {
+		font-size: $baseSize * 2;
 	}
 }
