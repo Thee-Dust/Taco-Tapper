@@ -31,15 +31,15 @@
 
 .taco-button {
 	position: absolute;
-	left: 50%;
-	top: 50%;
+	left: 15%;
+	top: 25%;
 	width: $baseSize * 50;
 	height: $baseSize * 50;
 	background: none;
 	border: none;
 	cursor: pointer;
-	margin-top: $baseSize * 5;
-	transform: translate(-50%, -50%);
+
+	// transform: translate(-50%, -50%);
 
 	&:active {
 		animation: bounce .5s ease-in-out;
@@ -101,14 +101,26 @@
 
 
 /*~~~~~~Media Queries~~~~~~*/
-@media screen and (min-width: 800px) and (max-width: 1200px) {
+@media screen and (min-width: 950px) and (max-width: 1100px) {
 	.taco-button {
-		width: $baseSize * 45;
-		height: $baseSize * 45;
+		width: $baseSize * 43;
+		height: $baseSize * 43;
 	}
 
 	.taco-img {
-		width: $baseSize * 45;
+		width: $baseSize * 43;
+	}
+}
+
+@media screen and (min-width: 800px) and (max-width: 950px) {
+	.taco-button {
+		left: 10%;
+		width: $baseSize * 40;
+		height: $baseSize * 40;
+	}
+
+	.taco-img {
+		width: $baseSize * 40;
 	}
 }
 
@@ -118,6 +130,7 @@
 	}
 
 	.taco-button {
+		left: 25%;
 		width: $baseSize * 40;
 		height: $baseSize * 40;
 	}
@@ -130,3 +143,45 @@
 		display: block;
 	}
 }
+@media screen and (min-width: 400px) and (max-width: 600px) {
+	.taco-tapper {
+		width: 100%;
+	}
+
+	.taco-button {
+		left: 20%;
+		top: 30%;
+		width: $baseSize * 35;
+		height: $baseSize * 35;
+	}
+
+	.taco-img {
+		width: $baseSize * 35;
+	}
+
+	.shop-btn {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.taco-tapper {
+		width: 100%;
+	}
+
+	.taco-button {
+		left: 10%;
+		top: 30%;
+		width: $baseSize * 30;
+		height: $baseSize * 30;
+	}
+
+	.taco-img {
+		width: $baseSize * 30;
+	}
+
+	.shop-btn {
+		display: block;
+	}
+}
+
