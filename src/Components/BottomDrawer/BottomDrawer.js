@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Drawer from 'react-bottom-drawer';
 import Shop from '../Shop/Shop';
+import './BottomDrawer.scss';
 
 
 

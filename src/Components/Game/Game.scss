@@ -81,6 +81,25 @@
 	}
 }
 
+.shop-btn {
+	display: none;
+	width: 60%;
+	height: $baseSize * 6.5;
+	background-color: $buttonColor;
+	border-radius: $baseSize * 1.5;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	bottom: 10%;
+	transform: translate(-50%, -50%);
+	
+	h2 {
+		font-size: $baseSize * 4;
+	}
+}
+
+
+
 /*~~~~~~Media Queries~~~~~~*/
 @media screen and (min-width: 800px) and (max-width: 1200px) {
 	.taco-button {
@@ -94,6 +113,10 @@
 }
 
 @media screen and (min-width: 600px) and (max-width: 800px) {
+	.taco-tapper {
+		width: 100%;
+	}
+
 	.taco-button {
 		width: $baseSize * 40;
 		height: $baseSize * 40;
@@ -101,5 +124,9 @@
 
 	.taco-img {
 		width: $baseSize * 40;
+	}
+
+	.shop-btn {
+		display: block;
 	}
 }
