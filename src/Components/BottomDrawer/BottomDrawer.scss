@@ -1,7 +1,7 @@
 @import '../../index.scss';
 
 .drawer {
-	background-color: $shopColor;
-	border-radius: 0;
-	border-top: $baseSize * 2 solid #FFF;
+	background: $shopColor !important;
+	border-radius: 0px !important;
+	border-top: $baseSize solid #FFF;
 }

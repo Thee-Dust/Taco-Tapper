@@ -3,10 +3,12 @@
 .shop {
 	width: 50%;
 	background-color: $shopColor;
+	text-align: center;
 
 	h2 {
 		font-size: $baseSize * 6;
 		margin-top: $baseSize * 5;
+		color: white;
 	}
 }
 
@@ -23,6 +25,10 @@
 @media screen and (max-width: 800px) {
 	.shop {
 		width: 100%;
+
+		h2 {
+			margin-top: 0px;
+		}
 	}
 }
 
