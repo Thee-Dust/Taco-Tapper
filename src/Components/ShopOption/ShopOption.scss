@@ -16,10 +16,15 @@
 	margin-bottom: $baseSize * 1.5;
 	box-shadow: 0px $baseSize * .5 $baseSize #000;
 	border: $baseSize * .125 solid #979797;
+	cursor: pointer;
 
 	.bottom-upgrade-row > p:nth-child(1) {
 		color: $shopOptionAvailibePriceColor;
 	}
+}
+
+.top-upgrade-row {
+	margin-top: $baseSize;
 }
 
 .top-upgrade-row,
@@ -45,6 +50,7 @@
 .upgrade:disabled {
 	color: $shopOptionUnavailibleColor;
 	background-color: $disabledButtonColor;
+	cursor: auto;
 
 	.bottom-upgrade-row>p:nth-child(1) {
 		color: $shopOptionUnavailibePriceColor;
@@ -52,7 +58,42 @@
 
 	.taco-image {
 		filter: brightness(0.5) drop-shadow(0px $baseSize * .25 $baseSize * .5 #000);
-
 	}
+}
 
+/*~~~~~~Media Queries~~~~~~*/
+@media screen and (min-width: 1100px) and (max-width: 1350px) {
+	.upgrade {
+		font-size: $baseSize * 3.5;
+	}
+}
+
+@media screen and (min-width: 950px) and (max-width: 1100px) {
+	.upgrade {
+		font-size: $baseSize * 3;
+	}
+}
+
+@media screen and (min-width: 800px) and (max-width: 950px) {
+	.upgrade {
+		font-size: $baseSize * 2.5;
+	}
+}
+
+@media screen and (min-width: 620px) and (max-width: 800px) {
+	.upgrade {
+		font-size: $baseSize * 4;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 620px) {
+	.upgrade {
+		font-size: $baseSize * 3;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.upgrade {
+		font-size: $baseSize * 2;
+	}
 }

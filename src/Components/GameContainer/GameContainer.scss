@@ -5,3 +5,12 @@
 	width: 100%;
 	height: $baseSize * 106.875;
 }
+
+/*~~~~~~Media Queries~~~~~~*/
+@media screen and (max-width: 800px) {
+	.game {
+		display: block;
+		overflow: hidden;
+		height: $baseSize * 98;
+	}
+}

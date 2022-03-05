@@ -42,7 +42,6 @@ export default function Shop() {
 	let shopOptionCards = <h1>No Options yet</h1>
 
 	if(shopOptionsData.length > 0) {
-		console.log(shopOptionsData)
 		shopOptionCards = shopOptionsData.map((option, index) => {
 			return(
 				<ShopOption 
@@ -59,7 +58,6 @@ export default function Shop() {
 				)
 		})
 	}
-
 
 	return (
 		<div className="shop">
