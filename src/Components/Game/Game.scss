@@ -31,7 +31,7 @@
 
 .taco-button {
 	position: absolute;
-	left: 15%;
+	left: 25%;
 	top: 25%;
 	width: $baseSize * 50;
 	height: $baseSize * 50;
@@ -101,6 +101,14 @@
 
 
 /*~~~~~~Media Queries~~~~~~*/
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+	.taco-button {
+		left: 15%;
+		top: 25%;
+	}
+}
+
 @media screen and (min-width: 950px) and (max-width: 1100px) {
 	.taco-button {
 		width: $baseSize * 43;
