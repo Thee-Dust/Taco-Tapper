@@ -1,6 +1,7 @@
 describe('Game screen', () => {
 	beforeEach(() => {
 		cy.visit('http://localhost:3000')
+		cy.interceptShopData()
 	})
 
 	it('Should display total tacos', () => {
