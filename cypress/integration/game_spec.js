@@ -28,8 +28,10 @@ describe('Game screen', () => {
 				cy.get('[data-testid=taco-btn]').click()
 			}
 			cy.get('[data-testid=option-1]').click()
+			cy.wait(1000)
 			.get('[data-testid=total-tacos]').should('contain', '0 Tacos')
 			.get('[data-testid=taco-btn]').click()
+			cy.wait(1000)
 			.get('[data-testid=total-tacos]').should('contain', '2 Tacos')
 	})
 })

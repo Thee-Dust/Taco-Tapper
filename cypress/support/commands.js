@@ -24,5 +24,5 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 Cypress.Commands.add('interceptShopData', () => {
-	cy.intercept('GET', './ShopData.json', {fixture: 'exampleShopData.json'})
+	cy.intercept('GET', '/ShopData.json', {fixture: 'exampleShopData.json'})
 })
