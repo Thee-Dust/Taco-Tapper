@@ -3,7 +3,7 @@
 .game {
 	display: flex;
 	width: 100%;
-	height: $baseSize * 106.875;
+	height: 100%;
 }
 
 /*~~~~~~Media Queries~~~~~~*/
@@ -11,6 +11,7 @@
 	.game {
 		display: block;
 		overflow: hidden;
-		height: $baseSize * 98;
+		// height: $baseSize * 98;
+		// height: 100%;
 	}
 }
