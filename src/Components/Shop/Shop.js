@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-
 import ShopOption from '../ShopOption/ShopOption'
 import getShopData from '../ApiCalls/ApiCalls'
 import './Shop.scss'
+import '../ShopOption/ShopOption.scss'
 
 export default function Shop() {
 	const [ shopOptionsData, setShopOptionsData ] = useState([]);
@@ -25,8 +25,8 @@ export default function Shop() {
 					const fetchedShopData = await getShopData();
 					setShopOptionsData(fetchedShopData)
 				}
-			} catch(error) {
-				setError(error.message)
+			} catch(err) {
+				setError(err.message)
 			}
 		}
 		callShopData()
@@ -39,7 +39,29 @@ export default function Shop() {
 		saveShopDataToStorage(shopOptionsData)
 	}, [shopOptionsData])
 
-	let shopOptionCards = <h1>No Options yet</h1>
+	// used for when the shop is loading to tell user that the shop data is loading
+	const loadingOptions = () => {
+		return (
+			<>
+				<div className='upgrade skeleton'>
+				</div>
+				<div className='upgrade skeleton'>
+				</div>
+				<div className='upgrade skeleton'>
+				</div>
+				<div className='upgrade skeleton'>
+				</div>
+				<div className='upgrade skeleton'>
+				</div>
+				<div className='upgrade skeleton'>
+				</div>
+				<div className='upgrade skeleton'>
+				</div>
+			</>
+		)
+	}
+
+	let shopOptionCards = loadingOptions();
 
 	if(shopOptionsData.length > 0) {
 		shopOptionCards = shopOptionsData.map((option, index) => {
@@ -57,6 +79,17 @@ export default function Shop() {
 				/>
 				)
 		})
+	}
+
+	if(!!error) {
+		return (
+			<div className="shop">
+				<h2 data-testid='shop-name'>Shop</h2>
+				<div className="shop-upgrades" data-testid='shop-container'>
+					{error}
+				</div>
+			</div>
+		)
 	}
 
 	return (
