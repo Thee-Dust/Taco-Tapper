@@ -25,4 +25,13 @@ describe('Shop',() => {
 				.get('[data-testid=option-1]').should('contain', 'LVL: 1')
 				.get('[data-testid=option-1]').should('contain', '214')
 	})
+
+	it('Should display a button to open shop in mobile', () => {
+		cy.viewport('iphone-xr')
+			.get('[data-testid=shop-btn]').should('contain', 'SHOP')
+			.click()
+		cy.get('.drawer').then(($el) => {
+			Cypress.dom.isVisible($el)
+		})
+	})
 })
