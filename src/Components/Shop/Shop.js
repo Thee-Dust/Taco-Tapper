@@ -61,8 +61,8 @@ export default function Shop() {
 
 	return (
 		<div className="shop">
-			<h2>Shop</h2>
-			<div className="shop-upgrades">
+			<h2 data-testid='shop-name'>Shop</h2>
+			<div className="shop-upgrades" data-testid='shop-container'>
 				{shopOptionCards}
 			</div>
 		</div>

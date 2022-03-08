@@ -14,7 +14,7 @@ export function GameProvider({ children }) {
 
 	const [ totalTacos, setTotalTacos ] = useState(() => {
 		const savedTotalTacos = localStorage.getItem('total-tacos');
-		return savedTotalTacos !== null ? JSON.parse(savedTotalTacos) : 0
+		return savedTotalTacos !== null ? JSON.parse(savedTotalTacos) : 1
 	});
 
 	const [ tacosPerSecond, setTacosPerSecond ] = useState(() => {
@@ -47,7 +47,6 @@ export function GameProvider({ children }) {
 	}
 
 	// useEffects used to save state into local storage
-
 	useEffect(() => {
 		const saveTotalTacosToStorage = () => {
 			localStorage.setItem('total-tacos', JSON.stringify(totalTacos))
