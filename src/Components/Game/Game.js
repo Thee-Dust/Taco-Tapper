@@ -31,13 +31,13 @@ export default function Game() {
 		<>
 			<div className="taco-tapper">
 				<div className="tacos">
-					<h2>{Math.round(displayedTacos).toLocaleString()} {tacoNoun}</h2>
-					<h3>{tacosPerSecond.toLocaleString()} tacos per second</h3>
+					<h2 data-testid='total-tacos'>{Math.round(displayedTacos).toLocaleString()} {tacoNoun}</h2>
+					<h3 data-testid='tacos-per-second'>{tacosPerSecond.toLocaleString()} tacos per second</h3>
 				</div>
-				<button onClick={() => tacosTapped(tacosPerClick)}className="taco-button">
-					<img src={taco} alt="pixel art of a taco" className="taco-img"/>
+				<button onClick={() => tacosTapped(tacosPerClick)} data-testid='taco-btn' className="taco-button">
+					<img src={taco} alt="pixel art of a taco" className="taco-img" data-testid='taco-img'/>
 				</button>
-				<button className='shop-btn' onClick={openDrawer}>
+				<button className='shop-btn' data-testid='shop-btn' onClick={openDrawer}>
 					<h2>SHOP</h2>
 				</button>
 			</div>

@@ -13,7 +13,8 @@ const ShopDrawer = ({isVisible, closeDrawer}) => {
 			hideScrollbars={true}
 			isVisible={isVisible}
 			onClose={closeDrawer}
-			className="drawer"
+			className='drawer'
+			data-testid='drawer'
 		>
 			<Shop />
 		</Drawer>

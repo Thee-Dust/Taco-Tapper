@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Taco Tuesday",
+		"level": 0,
+		"price": 100,
+		"reward": 1,
+		"rewardType": "click",
+		"description": "Adds 1 extra taco/click"
+	},
+	{
+		"name": "Taco Truck",
+		"level": 0,
+		"price": 125,
+		"reward": 1,
+		"rewardType": "passive",
+		"description": "Adds 1 taco/second"
+	},
+	{
+		"name": "Taco Resturant",
+		"level": 0,
+		"price": 1000,
+		"reward": 10,
+		"rewardType": "passive",
+		"description": "Adds 10 tacos/second"
+	}
+]

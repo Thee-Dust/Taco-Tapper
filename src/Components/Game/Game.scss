@@ -87,6 +87,7 @@
 	height: $baseSize * 6.5;
 	background-color: $buttonColor;
 	border-radius: $baseSize * 1.5;
+	box-shadow: 0px $baseSize * .5 $baseSize #000;
 	text-align: center;
 	position: absolute;
 	left: 50%;
@@ -102,7 +103,7 @@
 
 /*~~~~~~Media Queries~~~~~~*/
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
 	.taco-button {
 		left: 15%;
 		top: 25%;
@@ -113,6 +114,8 @@
 	.taco-button {
 		width: $baseSize * 43;
 		height: $baseSize * 43;
+		left: 12%;
+		top: 25%;
 	}
 
 	.taco-img {

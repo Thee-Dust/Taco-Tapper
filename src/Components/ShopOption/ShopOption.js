@@ -22,7 +22,7 @@ export default function ShopOption({id, name, level, basePrice, reward, rewardTy
 	}
 	
 	return (
-		<button id={id} className="upgrade" onClick={() => spendTacos(optionPrice, reward, id)} disabled={isDisabled}>
+		<button id={id} className="upgrade" onClick={() => spendTacos(optionPrice, reward, id)} disabled={isDisabled} data-testid={`option-${id + 1}`}>
 			<div className="top-upgrade-row">
 				<p>{name}</p>
 				<p>LVL: {level}</p>
