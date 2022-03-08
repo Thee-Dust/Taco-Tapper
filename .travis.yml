@@ -4,5 +4,5 @@ node_js:
 notifications:
   email: false
 script:
-  - yarn test
   - CI='' yarn build
+  - yarn test
