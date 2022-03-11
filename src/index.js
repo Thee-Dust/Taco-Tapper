@@ -6,11 +6,9 @@ import { GameProvider } from './Context/GameContext'
 
 
 ReactDOM.render(
-	<React.StrictMode>
-		<GameProvider>
-			<App />
-		</GameProvider>
-	</React.StrictMode>,
+	<GameProvider>
+		<App />
+	</GameProvider>,
   document.getElementById('root')
 );
 
