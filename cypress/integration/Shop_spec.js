@@ -30,8 +30,6 @@ describe('Shop',() => {
 		cy.viewport('iphone-xr')
 			.get('[data-testid=shop-btn]').should('contain', 'SHOP')
 			.click()
-		cy.get('.drawer').then(($el) => {
-			Cypress.dom.isVisible($el)
-		})
+		cy.get('.drawer')
 	})
 })
