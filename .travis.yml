@@ -5,4 +5,4 @@ notifications:
   email: false
 script:
   - yarn test
-  - CI='' npm run build
+  - CI='' yarn build
