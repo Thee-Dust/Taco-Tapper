@@ -81,22 +81,11 @@ export default function Shop() {
 		})
 	}
 
-	if(!!error) {
-		return (
-			<div className="shop">
-				<h2 data-testid='shop-name'>Shop</h2>
-				<div className="shop-upgrades" data-testid='shop-container'>
-					{error}
-				</div>
-			</div>
-		)
-	}
-
 	return (
 		<div className="shop">
 			<h2 data-testid='shop-name'>Shop</h2>
 			<div className="shop-upgrades" data-testid='shop-container'>
-				{shopOptionCards}
+				{!!error ? error : shopOptionCards}
 			</div>
 		</div>
 	)
