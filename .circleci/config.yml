@@ -15,4 +15,3 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - cypress/run:
-          yarn: true
