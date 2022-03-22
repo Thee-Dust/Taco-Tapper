@@ -16,7 +16,6 @@ workflows:
     jobs:
       - cypress/install
       - cypress/run:
+          start: npm start
           requires:
             - cypress/install
-      - node/run:
-          npm-run: test
